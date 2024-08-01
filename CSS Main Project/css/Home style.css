@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(233, 233, 233), rgb(188, 202, 202));
+}
+
+p {
+  color: rgb(255, 255, 255);
+}
+
+/* welcome video part  */
+.wel-video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  animation: hideVideo 1s ease-in-out forwards;
+  animation-delay: 0s;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* mask for the video */
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+main {
+  opacity: 0;
+  animation: showContent 1s ease-in-out forwards;
+}
+
+/* Animation for the welcome video hide and content show up */
+@keyframes hideVideo {
+  0% {
+    clip-path: circle(100% at 50% 50%);
+    opacity: 1;
+  }
+
+  100% {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+
+@keyframes showContent {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* First section of the main content  */
+
+.sec1 {
+  width: 100vw;
+  height: 55vw;
+  background-image: url(../image/img\ \(2\).jpg);
+  background-size: cover;
+}
+
+/* Second section of the main content  */
+
+.sec2 {
+  display: flex;
+  width: 80vw;
+  height: 30vw;
+  margin: 128px auto;
+}
+
+.sec2 div:nth-child(1) {
+  display: flex;
+
+  width: 45%;
+  background-color: aquamarine;
+}
+
+.sec2 div:nth-child(2) {
+  width: 55%;
+  background-color: aquamarine;
+}
+
+
+/* Third section of the main content  */
+.sec3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+  width: 90vw;
+  height: 45vw;
+  margin: 128px auto;
+
+
+}
+
+.sec3 div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: bisque;
+}
+
+img {
+  height: 100%;
+}
+
+/* Forth section of the main content  */
+.sec4 {
+  width: 100vw;
+  min-height: 50vw;
+  background-image: url(../image/img\ \(1\).jpg);
+  background-size: cover;
+
+}
