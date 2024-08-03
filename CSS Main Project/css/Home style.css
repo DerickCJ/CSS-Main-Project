@@ -49,6 +49,7 @@ p {
 main {
   opacity: 0;
   animation: showContent 1s ease-in-out forwards;
+  position: relative;
 }
 
 /* Animation for the welcome video hide and content show up */
@@ -77,11 +78,94 @@ main {
 /* First section of the main content  */
 
 .sec1 {
+  position: relative;
   width: 100vw;
   height: 55vw;
   background-image: url(../image/img\ \(2\).jpg);
   background-size: cover;
 }
+
+.sec1 h2 {
+  position: absolute;
+  font-size: 2.5em;
+  color: rgb(94, 151, 26);
+  font-family: "Fredericka the Great", serif;
+  text-align: center;
+  text-shadow: 5px 5px 3px rgb(169, 169, 169);
+  animation-duration: 5S;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: mastheadMove;
+}
+
+.sec1 h2:nth-child(1) {
+  right: 30%;
+  bottom: 48%;
+}
+
+.sec1 h2:nth-child(2) {
+  right: 10%;
+  bottom: 40%;
+}
+
+.book-button {
+  position: absolute;
+  top: 28%;
+  right: 25%;
+  width: 15em;
+  height: 3em;
+  line-height: 2.8em;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Ribeye", serif;
+  color: black;
+  border: solid 0.1em rgb(0, 0, 0);
+  border-radius: 3em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  animation: buttonZoom 2s infinite;
+}
+
+.book-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgb(193, 193, 193), #ff6b6b, rgb(193, 193, 193));
+  z-index: -1;
+  transition: transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.book-button:hover::before {
+  transform: scaleX(1);
+}
+
+.book-button:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+}
+
+/* animations for masthead */
+@keyframes mastheadMove {
+  0% {
+    transform: rotate(5deg) translateY(0);
+  }
+
+  25% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: rotate(-5deg) translateY(30px);
+  }
+}
+
+
 
 /* Second section of the main content  */
 
@@ -89,31 +173,64 @@ main {
   display: flex;
   width: 80vw;
   height: 30vw;
-  margin: 128px auto;
+  margin: 8em auto;
 }
 
-.sec2 div:nth-child(1) {
+.sec2>div:nth-child(1) {
   display: flex;
-
   width: 45%;
   background-color: aquamarine;
 }
 
-.sec2 div:nth-child(2) {
+.sec2>div:nth-child(2) {
   width: 55%;
   background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em;
 }
 
+.text-area {
+  /* height: 30%; */
+  width: 90%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  font-size: 1em;
+
+}
+
+.text-area div {
+  margin-left: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.text-area img {
+  width: 5em;
+  height: 2.5em;
+}
+
+.text-area div h3 {
+  display: block;
+  font-size: 1.2em;
+
+}
+
+.text-area div p {
+  font-size: 0.9em;
+}
 
 /* Third section of the main content  */
 .sec3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 16px;
+  gap: 1em;
   width: 90vw;
   height: 45vw;
-  margin: 128px auto;
+  margin: 8em auto;
 
 
 }
@@ -124,46 +241,45 @@ main {
   height: 100%;
   display: flex;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 1em;
 }
 
 .sec3 img {
   height: 100%;
+
 }
 
-.mask {
+.mask2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
 
 }
 
-.sec3 div:nth-child(1) {
+.sec3>div:nth-child(1) {
   background-color: rgba(221, 230, 237, 1);
 }
 
-.sec3 div:nth-child(2) {
+.sec3>div:nth-child(2) {
   background-color: rgba(217, 218, 226, 1);
 }
 
-.sec3 div:nth-child(3) {
+.sec3>div:nth-child(3) {
   background-color: rgba(222, 226, 211, 1);
 }
 
-.sec3 div:nth-child(4) {
+.sec3>div:nth-child(4) {
   background-color: rgb(217, 219, 237, 1);
 }
 
-h3 {
+.sec3 h3 {
   position: absolute;
   right: 5%;
   top: 10%;
@@ -171,20 +287,24 @@ h3 {
   font-size: 1.5em;
   font-family: "Fredericka the Great", sans-serif;
   letter-spacing: 2px;
-  text-shadow: 3px 3px 3px rgb(171, 171, 171);
+  text-shadow: 0.2em 0.2em 0.2em rgb(171, 171, 171);
   transition: all 0.3s;
 }
 
+/* button for section 3 */
 .button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 30%;
-  height: 15%;
+  width: 10em;
+  height: 2.5em;
+  line-height: 2.3em;
+  text-align: center;
+  font-size: 1em;
   font-family: "Ribeye", serif;
+  color: black;
+  background-color: rgba(255, 228, 196, 0.8);
+  border: solid 0.1em rgb(0, 0, 0);
   border-radius: 50px;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
   animation: buttonZoom 2s infinite;
   display: none;
 }
@@ -203,12 +323,12 @@ h3 {
   transform-origin: left;
 }
 
+/* all the hover effect in section 3*/
 .button:hover::before {
   transform: scaleX(1);
 }
 
 .button:hover {
-  background: linear-gradient(45deg, #ffffff, #6f6f6f, #ffffff);
   color: rgb(255, 255, 255);
 }
 
@@ -228,27 +348,78 @@ h3 {
 
 
 
-.sec3 div:hover .mask {
-  opacity: 1;
+.sec3 div:hover .mask2 {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .sec3 div:hover h3 {
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+  top: 20%;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+
 }
 
-.sec3 div:hover button {
+.sec3 div:hover .button {
   display: block;
 }
 
+/* floating oval  */
+.oval {
+  position: absolute;
+  width: 17vw;
+  height: 15vw;
+  clip-path: ellipse(50% 50% at 50% 50%);
+  animation-duration: 5S;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  background: linear-gradient(to right, rgb(132, 228, 252), rgb(203, 246, 255));
+  z-index: -1;
+}
 
+@keyframes ovalMove1 {
+  0% {
+    transform: rotate(20deg) translateX(-10%) translateY(0);
+  }
 
-/* Forth section of the main content  */
-.sec4 {
-  width: 100vw;
-  min-height: 50vw;
-  background-image: url(../image/img\ \(1\).jpg);
-  background-size: cover;
+  25% {
+    transform: rotate(20deg) translateX(-10%) translateY(-15px);
+  }
 
+  100% {
+    transform: rotate(20deg) translateX(-10%) translateY(30px);
+  }
+}
+
+@keyframes ovalMove2 {
+  0% {
+    transform: rotate(-20deg) translateX(10%) translateY(0);
+  }
+
+  25% {
+    transform: rotate(-20deg) translateX(10%) translateY(-15px);
+  }
+
+  100% {
+    transform: rotate(-20deg) translateX(10%) translateY(30px);
+  }
+}
+
+.oval-1 {
+  top: 60vw;
+  right: -10%;
+  animation-name: ovalMove1;
+}
+
+.oval-2 {
+  top: 91vw;
+  left: -10%;
+  animation-name: ovalMove2;
+}
+
+.oval-3 {
+  bottom: 0;
+  right: -10%;
+  animation-name: ovalMove1;
 }
