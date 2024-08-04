@@ -4,20 +4,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/Product style.css">
+  <!-- Add my fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dela+Gothic+One&family=Fredericka+the+Great&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Ribeye&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- add jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>Document</title>
 </head>
 
 <body>
+  <!-- global header -->
   <header></header>
 
   <main>
-    <section>图片轮播</section>
-    <section>副导航条</section>
-    <section>产品</section>
+    <!-- Two images slideshow -->
+    <section class="slide-show">
+      <div class="slide-container">
+        <img src="./image/img(8).jpg" alt="Image 1">
+        <img src="./image/img(7).jpg" alt="Image 2">
+      </div>
+    </section>
+
+    <!-- navigation bar -->
+    <section class="sub-nav" id="subNav">
+      <div class="nav-links">
+        <a href="#ss" class="active">Special Sale</a>
+        <a href="#b">Bestseller</a>
+        <a href="#cm">Classic Model</a>
+        <a href="#na">New Arrival</a>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- all the products  -->
+    <section class="products">
+
+      <div id="ss" class="series">
+        <h2>Special Sale</h2>
+        <div class="product">
+          <div>
+            <div class="product-img">
+              <img src="./image/1.png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$999</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+          <div>
+            <div class="product-img">
+              <img src="./image/img (3).png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$1099</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+          <div>
+            <div class="product-img">
+              <img src="./image/4.png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$1299</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="b" class="series">
+        <h2>Bestseller</h2>
+        <div class="product">
+          <div>
+            <div class="product-img">
+              <img src="./image/img (4).png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$999</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+          <div>
+            <div class="product-img">
+              <img src="./image/img (5).png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$999</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+          <div>
+            <div class="product-img">
+              <img src="./image/img(11).png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$999</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="cm" class="series">
+        <h2>Classic Model</h2>
+        <div class="product">
+          <div>
+            <div class="product-img">
+              <img src="./image/3.png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$99.99</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+          <div>
+            <div class="product-img">
+              <img src="./image/img(10).png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$99.99</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+          <div>
+            <div class="product-img">
+              <img src="./image/img (2).png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$99.99</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="na" class="series">
+        <h2>New Arrival</h2>
+        <div class="product">
+          <div>
+            <div class="product-img">
+              <img src="./image/2.png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$99.99</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+          <div>
+            <div class="product-img">
+              <img src="./image/img (1).png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$99.99</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+          <div>
+            <div class="product-img">
+              <img src="./image/img (3).png" alt="product1">
+            </div>
+            <div class="product-info">
+              <div class="price">$99.99</div>
+              <a class="info-button">More Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 
+  <!-- global footer -->
   <footer></footer>
 
+  <script src="./js/JS.js"></script>
 </body>
 
 </html>

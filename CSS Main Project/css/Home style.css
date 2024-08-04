@@ -1,3 +1,4 @@
+/* 4 parts in this page  */
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +11,14 @@
 }
 
 body {
-  background: linear-gradient(to right, rgb(255, 255, 255), rgb(233, 233, 233), rgb(188, 202, 202));
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255), rgb(233, 233, 233), rgb(178, 190, 205));
 }
 
 p {
   color: rgb(255, 255, 255);
 }
 
-/* welcome video part  */
+/* 1 :  welcome video part  */
 .wel-video {
   position: fixed;
   width: 100vw;
@@ -75,7 +76,7 @@ main {
   }
 }
 
-/* First section of the main content  */
+/* 2 : First section of the main content  */
 
 .sec1 {
   position: relative;
@@ -167,7 +168,7 @@ main {
 
 
 
-/* Second section of the main content  */
+/* 3 : Second section of the main content  */
 
 .sec2 {
   display: flex;
@@ -179,12 +180,10 @@ main {
 .sec2>div:nth-child(1) {
   display: flex;
   width: 45%;
-  background-color: aquamarine;
 }
 
 .sec2>div:nth-child(2) {
   width: 55%;
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -192,10 +191,8 @@ main {
 }
 
 .text-area {
-  /* height: 30%; */
   width: 90%;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   font-size: 1em;
 
@@ -214,15 +211,17 @@ main {
 
 .text-area div h3 {
   display: block;
-  font-size: 1.2em;
+  font-size: 1.5em;
 
 }
 
 .text-area div p {
-  font-size: 0.9em;
+  font-size: 1.2em;
+  font-family: "Kanit", sans-serif;
+  color: rgb(66, 66, 66);
 }
 
-/* Third section of the main content  */
+/* 4 : Third section of the main content  */
 .sec3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -408,7 +407,7 @@ main {
 
 .oval-1 {
   top: 60vw;
-  right: -10%;
+  right: -5%;
   animation-name: ovalMove1;
 }
 
