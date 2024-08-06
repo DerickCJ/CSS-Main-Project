@@ -4,10 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/Contact us style.css">
   <title>Document</title>
 </head>
 
 <body>
+  <!-- Header box with background image and title -->
+  <div class="header-box">
+    <h1>Contact Us</h1>
+  </div>
+
+  <!-- Main contact container -->
+  <div class="contact-container">
+    <!-- Left side with service hotlines, recruitment, and international business sections -->
+    <div class="contact-left">
+      <div class="contact-box">
+        <h2>Service Hotlines</h2>
+        <p><strong>Customer Support:</strong> +123 456 7890</p>
+        <p><strong>Technical Support:</strong> +123 456 7891</p>
+        <p><strong>Email:</strong> <a href="mailto:support@electricbikes.com">support@electricbikes.com</a></p>
+      </div>
+      <div class="contact-box">
+        <h2>Recruitment</h2>
+        <p><strong>HR Contact:</strong> +123 456 7892</p>
+        <p><strong>Email:</strong> <a href="mailto:hr@electricbikes.com">hr@electricbikes.com</a></p>
+      </div>
+      <div class="contact-box">
+        <h2>International Business</h2>
+        <p><strong>Email:</strong> <a href="mailto:international@electricbikes.com">international@electricbikes.com</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right side with contact form -->
+    <div class="contact-right">
+      <form class="contact-form">
+        <h2>Send Us a Message</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="phone">Phone (optional):</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
 
 </body>
 

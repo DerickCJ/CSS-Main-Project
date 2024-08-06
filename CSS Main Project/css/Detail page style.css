@@ -1,0 +1,154 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.product-image {
+  flex: 1;
+  min-width: 300px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  flex: 2;
+  padding: 20px;
+}
+
+.product-details h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.product-details .price {
+  font-size: 1.5em;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.product-details .description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.product-details .specs h2 {
+  margin-bottom: 10px;
+}
+
+.product-details .specs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-details .specs ul li {
+  margin-bottom: 5px;
+}
+
+.product-details .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.product-details .actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-details .actions .save {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.product-details .actions .save:hover {
+  background-color: #0056b3;
+}
+
+.product-details .actions .add-to-cart {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.product-details .actions .add-to-cart:hover {
+  background-color: #e0a800;
+}
+
+.product-details .actions .buy-now {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.product-details .actions .buy-now:hover {
+  background-color: #218838;
+}
+
+.reviews {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reviews h2 {
+  margin-bottom: 20px;
+}
+
+.review {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.related-products {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.related-products h2 {
+  margin-bottom: 20px;
+}
+
+.related-products .related-item {
+  display: inline-block;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.related-products .related-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.related-products .related-item p {
+  text-align: center;
+  margin-top: 10px;
+}
