@@ -8,6 +8,21 @@
 //   }
 // });
 
+// Slide up
+function SlideUp() {
+  var reveals = document.querySelectorAll(".slide-up");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
 
 // Images slideshow function
 let count = 0;
@@ -26,7 +41,7 @@ setInterval(nextImage, 3000);
 
 
 
-
+// animation for navigation bar in the product page
 window.addEventListener('scroll', function () {
   const subNav = document.getElementById('subNav');
   const offset = subNav.offsetTop;
@@ -52,7 +67,7 @@ const navLinks = document.querySelectorAll('.sub-nav a');
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.5 // 当元素至少有50%可见时触发回调
+  threshold: 0.5
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
