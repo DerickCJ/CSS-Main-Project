@@ -1,154 +1,409 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Three parts of the main content in this page  */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
+body {
+  background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+}
+
+
+/* First part : product details  */
 .product-container {
+  width: 85vw;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
-  margin: 20px auto;
-  background: #fff;
+  margin: 1.2em auto;
+  margin-top: 5em;
+  background: rgb(245, 245, 245);
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.8em 1.2em rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 .product-image {
   flex: 1;
-  min-width: 300px;
-  background: #f8f8f8;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .product-image img {
-  max-width: 100%;
+  border: solid rgb(40, 167, 69);
+  border-radius: 8px;
   height: auto;
+  margin-left: 1em;
+  max-width: 100%;
 }
 
 .product-details {
   flex: 2;
-  padding: 20px;
+  padding: 1.2em;
 }
 
 .product-details h1 {
   font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 0.6em;
+  color: rgb(40, 167, 69);
+  text-shadow: 0.1em 0.1em 0.1em rgb(255, 171, 171);
 }
 
 .product-details .price {
   font-size: 1.5em;
-  color: #28a745;
-  margin-bottom: 20px;
+  color: rgb(40, 167, 69);
+  margin-bottom: 1.2em;
 }
 
 .product-details .description {
-  margin-bottom: 20px;
+  margin-bottom: 1.2em;
   line-height: 1.6;
+  font-family: "Kanit", sans-serif;
+}
+
+.product-details .specs {
+  /* border: dashed 2px rgb(40, 167, 69); */
+  border-radius: 1em;
+  width: 40%;
+  margin: 1em 0;
 }
 
 .product-details .specs h2 {
-  margin-bottom: 10px;
+  margin: 0.5em 0 0.5em 0.5em;
 }
 
 .product-details .specs ul {
   list-style: none;
-  padding: 0;
+  margin-left: 2em;
+
 }
 
 .product-details .specs ul li {
-  margin-bottom: 5px;
+  margin-bottom: 0.3em;
 }
 
 .product-details .actions {
+  height: 3.5em;
   display: flex;
-  gap: 10px;
+  gap: 0.8em;
 }
 
 .product-details .actions button {
-  padding: 10px 15px;
+  width: 8em;
+  height: 3em;
+  text-shadow: 0.1em 0.1em 0.2em rgb(0, 0, 0);
+  font-family: "Kanit", sans-serif;
+  color: #000000;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.buy-now {
+  animation: buttonZoom 2s infinite;
+}
+
+@keyframes buttonZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 .product-details .actions .save {
-  background-color: #007bff;
   color: #fff;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 }
 
 .product-details .actions .save:hover {
-  background-color: #0056b3;
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
 }
 
 .product-details .actions .add-to-cart {
-  background-color: #ffc107;
+  background-image: linear-gradient(to left, #fa709a 0%, #fee140 100%);
   color: #fff;
 }
 
 .product-details .actions .add-to-cart:hover {
-  background-color: #e0a800;
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
 }
 
 .product-details .actions .buy-now {
-  background-color: #28a745;
+  background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
   color: #fff;
 }
 
 .product-details .actions .buy-now:hover {
-  background-color: #218838;
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
 }
 
+
+/* Second : custormer reviews */
 .reviews {
-  max-width: 1200px;
-  margin: 20px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 94vw;
+  height: auto;
+  margin: 1.2em auto;
+  background: rgb(245, 245, 245);
+  padding: 1.2em;
+  border-radius: 0.7em;
+  box-shadow: 0 0.4em 0.7em rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .reviews h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1em;
+  font-size: 1.6em;
+  font-family: "Fredericka the Great", sans-serif;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .review {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  border-bottom: 2px dashed #383838;
+
+  padding-bottom: 0.6em;
+  margin: 0 3em 1em;
+  font-family: "Kanit", sans-serif;
 }
 
+
+/* Third part : related products */
 .related-products {
-  max-width: 1200px;
-  margin: 20px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 94vw;
+  height: 20em;
+  margin: 1.2em auto;
+  background: rgb(245, 245, 245);
+  padding: 1.2em;
+  border-radius: 0.7em;
+  box-shadow: 0 0.4em 0.7em rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
 }
 
 .related-products h2 {
-  margin-bottom: 20px;
+  position: absolute;
+  top: 7%;
+  left: 2%;
+  font-size: 1.6em;
+  font-family: "Fredericka the Great", sans-serif;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.related-products .related-item {
-  display: inline-block;
-  width: 200px;
-  margin-right: 20px;
+
+.related-item {
+  width: 20%;
+  height: 75%;
+  box-shadow: 0.2em 0.2em 0.4em rgba(255, 183, 183, 0.7);
+
+
 }
 
 .related-products .related-item img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0.5em;
 }
 
 .related-products .related-item p {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0.6em;
+  font-family: "Ribeye", serif;
+}
+
+
+
+/* global header  */
+.logo {
+  display: flex;
+  align-items: center;
+  width: 15em;
+
+}
+
+.logo p {
+  width: 50%;
+  margin-left: 1em;
+  color: rgb(226, 145, 39);
+  font-size: 1.5em;
+  font-family: Sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 1px 2px 1px rgb(230, 230, 230);
+}
+
+.iconLogo {
+  width: 3.5em;
+  height: 3em;
+  margin-right: 5px;
+}
+
+
+
+/* set nav */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  height: 5em;
+  padding: 0 3vw 0 2vw;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s ease;
+
+}
+
+/* set menu */
+.menu {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+}
+
+.menu li {
+  width: 10em;
+}
+
+.menu a {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-shadow: 0.1em 0.1em 0.3em rgb(230, 0, 0);
+  color: rgb(255, 255, 255)
+}
+
+/* set log in and register */
+.login a,
+.login {
+  color: rgb(255, 255, 255);
+  text-shadow: 0.1em 0.1em 0.3em rgb(255, 0, 0);
+  font-weight: 600;
+}
+
+
+/* Global Footer part */
+/* set footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  padding: 3vh 8vw 3vh 5vw;
+
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5px auto;
+
+
+}
+
+.footer-icons a {
+
+  width: 25px;
+  height: 25px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 2px;
+  font-size: 20px;
+  color: rgb(248, 157, 40);
+  text-align: center;
+  line-height: 25px;
+  margin-left: 3px;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-left p {
+  display: inline-block;
+  margin: 4px 0;
+
+}
+
+.footer-left i {
+  font-size: 20px;
+  color: rgb(248, 157, 40);
+  width: 25px;
+}
+
+.footer-center p {
+  text-align: center;
+  line-height: 25px;
+}
+
+a {
+
+  color: #fff;
+}
+
+/* Change color on mouse hover */
+a:hover {
+  color: rgba(255, 0, 0, 1);
+  opacity: 0.9;
+  font-size: larger;
+}
+
+.fa:hover {
+  color: rgba(255, 0, 0, 1);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Media queries for small screen adjustments */
+@media(max-width: 850px) {
+  * {
+    font-size: 12px;
+  }
+
+
+}
+
+@media(max-width: 750px) {
+  * {
+    font-size: 10px;
+  }
+
+}
+
+@media(max-width: 650px) {
+  * {
+    font-size: 9px;
+  }
+
+
 }
